@@ -12,6 +12,8 @@ Firebase services are used for Authentication and storage.
 
 Each user has a private lists and sub-lits.
 
+There is a public list for users to access trending movies and shows.
+
 OMDB API is used as an search engine for movies and shows.
 
 ← `index.html`: This is the main HTML page for your site.
