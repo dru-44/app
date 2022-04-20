@@ -70,12 +70,12 @@
         }
 
         function removeData(){
-            var l='List4'
+            var l='Fav'
             // var a = document.getElementById("btn-remlist").value;
             var userID = firebase.auth().currentUser.uid;
             var rootRef = firebase.database().ref().child("Mov-list/");
             
-            var userRef = rootRef.child(userID+"/"+l);
+            var userRef = rootRef.child(l);
             userRef.remove()
             window.location.reload();
             // var userID = firebase.auth().currentUser.uid;
