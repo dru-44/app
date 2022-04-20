@@ -178,7 +178,7 @@ async function loadMovies(searchTerm) {
   const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=1a0304e4`;
   const res = await fetch(`${URL}`);
   const data = await res.json();
-   console.log(data.Search);
+  //  console.log(data.Search);
   if (data.Response == "True") displayMovieList(data.Search);
 }
 
@@ -262,6 +262,142 @@ function loadMovieDetails() {
           window.alert("error");
         }
       });
+
+
+      $("#btn-addlist1").click(function () {
+        var movtit = details.Title;
+        var movpos = details.Poster;
+        var movrat = details.Rated;
+        var movieid = details.imdbID;
+        var userID = firebase.auth().currentUser.uid;
+        var l='List1'
+        var rootRef = firebase.database().ref().child("Mov-list/"+userID+"/"+l);
+        
+
+        var userRef = rootRef.child(movieid);
+        if (movieid != "") {
+          var userData = {
+            "movieID":movieid,
+            "movietitle": movtit,
+            "moviepos": movpos,
+            "movieratings": movrat,
+          };
+          userRef.set(userData, function (error) {
+            if (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              window.alert("Message :" + errorMessage);
+            } else {
+              window.alert("Added to list list1");
+            }
+          });
+        } else {
+          window.alert("error");
+        }
+      });
+
+      $("#btn-addlist2").click(function () {
+        var movtit = details.Title;
+        var movpos = details.Poster;
+        var movrat = details.Rated;
+        var movieid = details.imdbID;
+        var userID = firebase.auth().currentUser.uid;
+        var l='List2'
+        var rootRef = firebase.database().ref().child("Mov-list/"+userID+"/"+l);
+        
+
+        var userRef = rootRef.child(movieid);
+        if (movieid != "") {
+          var userData = {
+            "movieID":movieid,
+            "movietitle": movtit,
+            "moviepos": movpos,
+            "movieratings": movrat,
+          };
+          userRef.set(userData, function (error) {
+            if (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              window.alert("Message :" + errorMessage);
+            } else {
+              window.alert("Added to list list2");
+            }
+          });
+        } else {
+          window.alert("error");
+        }
+      });
+      $("#btn-addlist3").click(function () {
+        var movtit = details.Title;
+        var movpos = details.Poster;
+        var movrat = details.Rated;
+        var movieid = details.imdbID;
+        var userID = firebase.auth().currentUser.uid;
+        var l='List3'
+        var rootRef = firebase.database().ref().child("Mov-list/"+userID+"/"+l);
+        
+
+        var userRef = rootRef.child(movieid);
+        if (movieid != "") {
+          var userData = {
+            "movieID":movieid,
+            "movietitle": movtit,
+            "moviepos": movpos,
+            "movieratings": movrat,
+          };
+          userRef.set(userData, function (error) {
+            if (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              window.alert("Message :" + errorMessage);
+            } else {
+              window.alert("Added to list list3");
+            }
+          });
+        } else {
+          window.alert("error");
+        }
+      });
+
+      $("#btn-addlist4").click(function () {
+        var movtit = details.Title;
+        var movpos = details.Poster;
+        var movrat = details.Rated;
+        var movieid = details.imdbID;
+        var userID = firebase.auth().currentUser.uid;
+        var l='List4'
+        var rootRef = firebase.database().ref().child("Mov-list/"+userID+"/"+l);
+        
+
+        var userRef = rootRef.child(movieid);
+        if (movieid != "") {
+          var userData = {
+            "movieID":movieid,
+            "movietitle": movtit,
+            "moviepos": movpos,
+            "movieratings": movrat,
+          };
+          userRef.set(userData, function (error) {
+            if (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              window.alert("Message :" + errorMessage);
+            } else {
+              window.alert("Added to list list4");
+            }
+          });
+        } else {
+          window.alert("error");
+        }
+      });
     });
   });
 }
@@ -288,7 +424,17 @@ function displayMovieDetails(details) {
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${
           details.Awards
         }</p>
-        <input id="btn-addlist" type="button" class="btn btn-info btn-add-favorite" value="+" />
+        <div class="dropdown">
+        <button class="dropbtn">Add To</button>
+        <div class="dropdown-content">
+        
+        <a><input id="btn-addlist1" type="button" class="btn btn-info btn-add-favorite" value="List1" /></a>
+        <a><input id="btn-addlist2" type="button" class="btn btn-info btn-add-favorite" value="List2" /></a>
+        <a><input id="btn-addlist3" type="button" class="btn btn-info btn-add-favorite" value="List3" /></a>
+        <a><input id="btn-addlist4" type="button" class="btn btn-info btn-add-favorite" value="List4" /></a>
+        </div>
+        </div>
+        
         </div>
         
     `;
