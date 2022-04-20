@@ -24,7 +24,7 @@
         })
         
         function getUserData() {
-            var userID = firebase.auth().currentUser.uid;
+            
             var l='Fav'
             firebase.database().ref("Mov-list/"+l).on("value", snap => {
                 var movies = snap.val();
