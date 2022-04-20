@@ -398,6 +398,40 @@ function loadMovieDetails() {
           window.alert("error");
         }
       });
+
+      $("#btn-fav").click(function () {
+        var movtit = details.Title;
+        var movpos = details.Poster;
+        var movrat = details.Rated;
+        var movieid = details.imdbID;
+        var userID = firebase.auth().currentUser.uid;
+        var l='Fav'
+        var rootRef = firebase.database().ref().child("Mov-list/"+l);
+        
+
+        var userRef = rootRef.child(movieid);
+        if (movieid != "") {
+          var userData = {
+            "movieID":movieid,
+            "movietitle": movtit,
+            "moviepos": movpos,
+            "movieratings": movrat,
+          };
+          userRef.set(userData, function (error) {
+            if (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              window.alert("Message :" + errorMessage);
+            } else {
+              window.alert("Added to Most-liked");
+            }
+          });
+        } else {
+          window.alert("error");
+        }
+      });
     });
   });
 }
@@ -427,11 +461,12 @@ function displayMovieDetails(details) {
         <div class="dropdown">
         <button class="dropbtn">Add To</button>
         <div class="dropdown-content">
-        
+        <a><input id="btn-fav" type="button" class="btn btn-info btn-add-favorite" value="Most-liked" /></a>
         <a><input id="btn-addlist1" type="button" class="btn btn-info btn-add-favorite" value="List1" /></a>
         <a><input id="btn-addlist2" type="button" class="btn btn-info btn-add-favorite" value="List2" /></a>
         <a><input id="btn-addlist3" type="button" class="btn btn-info btn-add-favorite" value="List3" /></a>
         <a><input id="btn-addlist4" type="button" class="btn btn-info btn-add-favorite" value="List4" /></a>
+        
         </div>
         </div>
         

@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <!--Scroll reveal CDN-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="stylesheet" href="/css/st.css">
-    <link rel="stylesheet" href="/css/mov-main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -32,7 +32,6 @@
 
 </head>
 <body>
-    
     <header>
         <div class="container">
             <nav class="nav">
@@ -41,10 +40,10 @@
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
                 </div>
-                <a href="#" class="nav-link">M O V I E</a>
+                <a href="home.html" class="nav-link">M O V I E</a>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="home.html" class="nav-link">Home</a>
                     </li>
                     
                     
@@ -53,83 +52,18 @@
                     <li class="nav-item">
                         <a href="user-display.html" class="nav-link">Account</a>
                     </li>
-                    
-                    
                 </ul>
             </nav>
         </div>
     </header>
-    
-    
     <section class="hero" id="hero">
         <div class="container">
             <h2 class="sub-headline">
-                <span class="first-letter"></span>
+                <span class="first-letter">M</span>ost-liked
             </h2>
-            <h1 class="headline">Movie</h1>
-            <div class="-headline-description">
-                <div class="separator">
-                    <!-- <div class="line line-left"></div>
-                    <div class="asterisk"><i class="fas fa-asterisk"></i></div>
-                    <div class="line line-right"></div> -->
-                </div>
-                <div class="single-animation">
-                    <h5>"Watch list"</h5>
-    
-    
-    
-                    <div class="btn cta-btn">
-                        <input id="btn-logout" type="button" class="btn cta-btn" value="logout" />
-                        
-                        
-                    </div>
-                    <!-- <a href="#" class="btn cta-btn">explore</a> -->
-                </div>
-    
-    
-    
-    
-    
-    
-            </div>
+            
         </div>
     </section>
-
-
-<div class = "wrapper">
-    <!-- logo -->
-    <div class = "logo">
-        <div class = "container">
-            <!-- <p>Movie<span>Corn.</span></p> -->
-        </div>
-    </div>
-    <!-- end of logo -->
-    <!-- search container -->
-    <div class = "search-container">
-        <div class = "search-element">
-            <h3>Search Movie:</h3>
-            <input type = "text" class = "form-control" placeholder="Search Movie Title ..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
-
-            <div class = "search-list" id = "search-list">
-               
-            </div>
-        </div>
-    </div>
-    <!-- end of search container -->
-
-    <!-- result container -->
-    <div class = "container">
-        <div class = "result-container">
-            <div class = "result-grid" id = "result-grid">
-                
-                
-            </div>
-        </div>
-    </div>
-    <!-- end of result container -->
-</div>
-
-
 
 
 
@@ -139,8 +73,8 @@
         <div class="global-headline">
             <div class="animate-top">
                 <h2 class="sub-headline">
-                    <span class="first-letter">M</span>y List <br> <br>
-                    <!-- <button id="btn-remlist"  class="btn btn cta-btn" name="subject" type="submit" value="remove" onclick="removeData()">Clear list</button> -->
+                    <span class="first-letter">L</span>iked List <br> <br>
+                    <!-- <button id="btn-remlist"  class="btn cta-btn" name="subject" type="submit" value="remove" onclick="removeData()">Clear list</button> -->
                 </h2>
             </div>
             <div class="animate-bottom">
@@ -151,47 +85,16 @@
     </div>
 </section>
 
-<link rel="stylesheet" href="/css/st.css">
+
+
 <div id="app" class="con">
-    <a href="mylist_page1.html"><card data-image="https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/image_processing20210416-26501-7v5ysd.gif?v=1650432628403">
-      <h1 slot="header">1</h1>
-      
-      <p slot="content">Continue<br>.</p>
-    </card>
-  </a>
     
-  <a href="mylist_page2.html"><card data-image="https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/letter-i-dribbble.gif?v=1650433269521">
-      <h1 slot="header">2</h1>
-      <p slot="content">Continue<br>.</p>
-    </card>
-  </a>
-    
-  <a href="mylist_page3.html"><card data-image="https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/cab7cd042d1a355eef7cee4f0fff2433.gif?v=1650433272790">
-      <h1 slot="header">3</h1>
-      <p slot="content">Continue<br>.</p>
-    </card>
-  </a>
-  
-    <a href="mylist_page4.html"><card data-image="https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/d924a87eda8f69722eae4d0e01fb578b.gif?v=1650433279823">
-      <h1 slot="header">4</h1>
-      <p slot="content">Continue<br>.</p>
-    </card> 
-  </a>
-  
-<a href="fav_page.html"><card data-image="https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/heart-animation_repost.gif?v=1650453057720">
-    <h1 slot="header">Most-liked</h1>
-    <p slot="content">Continue<br>.</p>
-  </card> 
-</a>
-
     
   
-
   </div>
   <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'>
     </script>
-
 
 
 
@@ -206,7 +109,7 @@
         </div>
         <div class="footer-content">
             <div class="footer-content-about animate-top">
-                <h4>B R E A T H</h4>
+                <h4>ABOUT US!</h4>
                 <div class="asterisk"><i class="fas fa-asterisk"></i></div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptate inventore adipisci totam beatae placeat, alias facere magnam sit magni animi non laudantium atque accusantium ipsam est dolorum. Voluptatum, repellendus!
@@ -247,10 +150,8 @@
     </div>
 </footer>
 <script src="/js/me.js"></script>
-<script src="/js/test.js"></script>
 <script src="/js/index.js"></script>
-<!-- <script src="/js/mov.js"></script> -->
-
+<script src="/js/mov-fav.js"></script>
    
 
     
