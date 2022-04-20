@@ -5,30 +5,35 @@
 *::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
+
 
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
     --body-font: 'Cabin', sans-serif;
     --main-font-color-dark: #252525;
-    --secondary-font-color: #c59d5f;
-    --body-font-color: #515151;
+    --secondary-font-color: #dfbd8b;
+    --body-font-color: #777575;
 }
 html{
     font-family: var(--body-font);
     font-size: 10px;
     color: var(--body-font-color);
     scroll-behavior: smooth;
+    
 }
 body{
     overflow-x: hidden;
+    
 }
 section{
     padding: 3.9rem 0;
     overflow: hidden;
+    box-sizing: border-box;
 }
+
 
 img{
     width: 100%;
@@ -142,18 +147,18 @@ header{
 
 .hero{
     width: 100%;
-    height: 100vh;
-    background: url("https://cdn.glitch.com/790fed21-1c10-4f77-a813-dad7e32da152%2F1295649.jpg?v=1621494965783") center no-repeat;
+    height: 60vh;
+    background: url("https://cdn.glitch.global/25b8624e-210d-47aa-9e49-023dc3754b9a/wp6942952-white-minimalist-wallpapers.jpg?v=1650433979048") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    text-align: end;
+    justify-content: center;
+    text-align: center;
 }
 .sub-headline{
     font-size: 8.5rem;
     font-family: var(--secondary-font);
-    color: #685333;
+    color: #9b7843;
     font-weight: 100;
     line-height: .4;
     letter-spacing: 2px;
@@ -177,15 +182,10 @@ header{
     
 
 }
-h5{
-    font-style: italic;
-    font-family:'Courier New', Courier, monospace;
-
-}
 .separator{
     display: flex;
-    align-items: unset;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 
 }
 .line{
@@ -260,7 +260,15 @@ h5{
 }
 
 
-
+/* .tasteful-recipes{
+    background: url("https://cdn.glitch.com/790fed21-1c10-4f77-a813-dad7e32da152%2Fwp5204110-minimal-nature-wallpapers.jpg?v=1621494992037") center no-repeat;
+    background-size: cover;
+}
+.between{
+    min-height: 64vh;
+    display: flex;
+    align-items: center;
+} */
 
 p {
     line-height: 1.5em;
@@ -399,91 +407,10 @@ p {
 
 
 
-/* discover */
-.global-headline{
-    text-align: center;
-    margin-top: 3.9rem;
-}
-.discover-our-story .global-headline{
-    margin-top: 6.9rem;
-}
-.global-headline .asterisk{
-    color: var(--body-font-color);
-    margin: 2.4rem 0;
 
-}
-.headline-dark{
-    color: var(--main-font-color-dark);
-    letter-spacing: .7rem;
-    margin-right: -.7rem;
-}
-.global-headline.sub-headline{
-    letter-spacing: -1px;
-    line-height: .42;
-}
-.restaurant-info{
-    text-align: center;
-}
-.restaurant-description{
-    margin-bottom: 3rem;
-}
-.restaurant-description p{
-    line-height: 1.6;
-    margin-bottom: 2.4rem;
-}
-.body-btn{
-    font-size: 1.5rem;
-    color: var(--secondary-font-color);
-    position: relative;
-    transition: color .5s;
-}
-.body-btn::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--secondary-font-color);
-    transition: background-color .5s;
-}
-.body-btn:hover,
-.body-btn:focus{
-    color: var(--main-font-color-dark);
-}
-.body-btn:hover::before,
-.body-btn:focus::before{
-    background-color: var(--main-font-color-dark);
-}
 
-/* Tasteful */
-.tasteful-recipes{
-    background: url("https://cdn.glitch.com/790fed21-1c10-4f77-a813-dad7e32da152%2Fwp5204110-minimal-nature-wallpapers.jpg?v=1621494992037") center no-repeat;
-    background-size: cover;
-}
-.between{
-    min-height: 64vh;
-    display: flex;
-    align-items: center;
-}
-/* discover  menu*/
-.image-group{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 1.5rem;
 
-}
-.discover-our-menu.restaurant-description{
-    padding-top: 3rem;
-    margin-bottom: 0;
 
-}
-
-/* the perfect blend  */
-.perfect-blend{
-    background: url("https://cdn.glitch.com/790fed21-1c10-4f77-a813-dad7e32da152%2Fwp4892354-4k-minimal-wallpapers.jpg?v=1621494990825") center no-repeat;
-    background-size: cover;
-}
 
 /* footer */
 footer{
@@ -492,6 +419,8 @@ footer{
     color: white;
     text-align: center;
     position: relative;
+    
+    
 }
 .back-to-top{
     width: 7rem;
@@ -569,7 +498,7 @@ footer{
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-    margin-left: 20rem;
+    margin-left: 10.5rem;
 }
 
 /* media queries  */
@@ -660,7 +589,7 @@ footer{
         opacity: 1;
     }
     .newsletter-btn{
-        margin-left: 10.5rem;
+        margin-left: 22.5rem;
     }
 }
 
@@ -722,9 +651,6 @@ footer{
     }
 }
 
-
-
-/* Dropdown Button */
 .dropbtn {
     background-color: #04AA6D;
     color: white;
@@ -765,18 +691,3 @@ footer{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
